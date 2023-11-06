@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./assets/css/style.css" rel="stylesheet">
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/dynamicListener.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<div>
+			<a href="#" class="btn_guide">레이어팝업</a>
+		</div>
+	</div>
+	<script>
+		var designAlert = new DesignModal({
+			type: "alert", // alert, confirm
+			main_message: "메시지 입력하세요",
+			// sub_message : "서브 테스트",
+			identify_callback: function() {
+				console.log('확인');
+			},
+			cancel_callback: function() {
+				console.log('취소');
+			}
+		})
+		designAlert.show();
+		// 강제로 닫기 designAlert.removeHide();
+	</script>
+</body>
+
+</html>
