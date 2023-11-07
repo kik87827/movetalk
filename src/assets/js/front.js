@@ -58,10 +58,32 @@ function resizeAction(callback){
  * 레이아웃
  */
 function layoutFunc() {
+  const page_wrap = document.querySelector(".page_wrap");
+  const top_layer_wrap = document.querySelector(".top_layer_wrap");
+  const top_layer_content = document.querySelector(".top_layer_content");
+  const bottom_layer_wrap = document.querySelector(".bottom_layer_wrap");
+  const bottom_layer_content = document.querySelector(".bottom_layer_content");
+
+  layerLayout();
   resizeAction(()=>{
-   
+    layerLayout();
   });
+
+  function layerLayout(){
+
+    if(!!page_wrap && !!top_layer_content){
+      page_wrap.style.paddingTop = top_layer_content.getBoundingClientRect().height + "px";
+      page_wrap.style.paddingBottom = bottom_layer_content.getBoundingClientRect().height + "px";
+    }
+
+    if(!!page_wrap && !!bottom_layer_content){
+      page_wrap.style.paddingTop = top_layer_content.getBoundingClientRect().height + "px";
+      page_wrap.style.paddingBottom = bottom_layer_content.getBoundingClientRect().height + "px";
+    }
+  }
 }
+
+/*  */
 
 /**
  * menu rock
