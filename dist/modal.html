@@ -17,25 +17,36 @@
 
 <body class="front_body">
 	<div class="page_wrap">
-		<div>
-			<a href="#" class="btn_guide">레이어팝업</a>
+		<!-- popup -->
+		<div class="popup_wrap" id="samplePopup">
+			<div class="bg_dim"></div>
+			<div class="popup_modal_box_zone">
+				<div class="popup_modal_box_wrap">
+					<div class="popup_modal_box_inner">
+						<div class="popup_modal_box">
+							<div class="modal_contents_row">
+								<p class="modal_main_message">SMS문자로 임의비밀번호가 <br>발송이 되었습니다.</p>
+								<p class="modal_sub_message">※ 로그인 후 비밀번호를 변경해주세요</p>
+							</div>
+							<div class="modal_btn_row">
+								<a href="javascript:;" class="btn_modal_submit close_trigger">확인</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		<!-- // popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var designPopup = new DesignPopup({
+					selector: "#samplePopup"
+				});
+
+				designPopup.popupShow();
+			});
+		</script>
 	</div>
-	<script>
-		var designAlert = new DesignModal({
-			type: "alert", // alert, confirm
-			main_message: "메시지 입력하세요",
-			// sub_message : "서브 테스트",
-			identify_callback: function() {
-				console.log('확인');
-			},
-			cancel_callback: function() {
-				console.log('취소');
-			}
-		})
-		designAlert.show();
-		// 강제로 닫기 designAlert.removeHide();
-	</script>
 </body>
 
 </html>

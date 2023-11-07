@@ -2,16 +2,69 @@
 <html lang="ko">
 @@include('./include/_head.html')
 <body class="front_body">
-	<div class="page_wrap">
-        <section class="middle_wrap">
-            <p>Pretend</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:400;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:500;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:600;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:700;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:800;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:900;">1:1 문의</p>
-        </section>
-	</div>
+    <form>
+        <div class="page_wrap">
+            <header class="header_wrap top_layer_wrap">
+                <hgroup class="hgroup_pixin top_layer_content">
+                    <div class="header_left_layer"><a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a></div>
+                    <h1 class="header_top_title">비밀번호 찾기</h1>
+                </hgroup>
+            </header>
+            <section class="middle_wrap">
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.<br>
+                내용이 들어갑니다.
+            </section>
+            <!-- popup -->
+            <div class="popup_wrap" id="pwModal">
+                <div class="bg_dim"></div>
+                <div class="popup_modal_box_zone">
+                    <div class="popup_modal_box_wrap">
+                        <div class="popup_modal_box_inner">
+                            <div class="popup_modal_box">
+                                <div class="modal_contents_row">
+                                    <p class="modal_main_message">SMS문자로 임의비밀번호가 <br>발송이 되었습니다.</p>
+                                    <p class="modal_sub_message">※ 로그인 후 비밀번호를 변경해주세요</p>
+                                </div>
+                                <div class="modal_btn_row">
+                                    <a href="javascript:;" class="btn_modal_submit close_trigger">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // popup -->
+            <script>
+                // 퍼블확인용
+                let url = window.location.href.split('?')[1];
+                let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+                // 선언
+                var pwModal = new DesignPopup({
+                    selector: "#pwModal"
+                });
+
+
+                if(url_2 === "popup"){
+                    // 호출
+                    pwModal.popupShow();
+                }
+                
+            </script>
+            @@include('./include/_footer.html')
+        </div>
+    </form>
 </body>
 </html>
