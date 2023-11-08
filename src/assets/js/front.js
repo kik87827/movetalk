@@ -73,11 +73,9 @@ function layoutFunc() {
 
     if(!!page_wrap && !!top_layer_content){
       page_wrap.style.paddingTop = top_layer_content.getBoundingClientRect().height + "px";
-      page_wrap.style.paddingBottom = bottom_layer_content.getBoundingClientRect().height + "px";
     }
 
     if(!!page_wrap && !!bottom_layer_content){
-      page_wrap.style.paddingTop = top_layer_content.getBoundingClientRect().height + "px";
       page_wrap.style.paddingBottom = bottom_layer_content.getBoundingClientRect().height + "px";
     }
   }

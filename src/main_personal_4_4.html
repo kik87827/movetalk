@@ -2,16 +2,73 @@
 <html lang="ko">
 @@include('./include/_head.html')
 <body class="front_body">
-	<div class="page_wrap">
-        <section class="middle_wrap">
-            <p>Pretend</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:400;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:500;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:600;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:700;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:800;">1:1 문의</p>
-            <p style="font-family: 'SUITE';font-size:30px;font-weight:900;">1:1 문의</p>
-        </section>
-	</div>
+	<form>
+		<div class="page_wrap">
+			<!-- popup -->
+			<div class="popup_wrap" id="termsPersonlPopup">
+				<div class="bg_dim"></div>
+				<div class="full_popup_container">
+					<div class="full_popup_top_row type2">	
+						<h2 class="full_popoup_title">개인정보 처리방침</h2>
+					</div>
+					<div class="full_popup_middle_row type2">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">닫기</span></a>
+				</div>
+			</div>
+			<!-- // popup -->
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					var termsPersonlPopup = new DesignPopup({
+						selector: "#termsPersonlPopup"
+					});
+
+					termsPersonlPopup.popupShow();
+				});
+			</script>
+		</div>
+	</form>
 </body>
 </html>

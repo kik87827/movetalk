@@ -2,28 +2,83 @@
 <html lang="ko">
 @@include('./include/_head.html')
 <body class="front_body">
-	<div class="page_wrap">
-        <!-- popup -->
-		<div class="popup_wrap" id="samplePopup">
-			<div class="bg_dim"></div>
-			<div class="popup_item">
-				<div class="popup_contentlow">
-					<div class="popup_confirm_copy_wrap">
-						<p class="popup_confirm_copy">Please contact the customer service for the ID/Password</p>
+	<form>
+		<div class="page_wrap">
+			<!-- popup -->
+			<div class="popup_wrap" id="samplePopup">
+				<div class="bg_dim"></div>
+				<div class="full_popup_container">
+					<div class="full_popup_top_row">	
+						<h2 class="full_popoup_title">주소찾기</h2>
 					</div>
+					<div class="full_popup_pix_row">
+						<div class="fp_form_wrap">
+							<p class="fp_form_copy"><strong>읍, 면, 동, 도로명주소</strong>를 <br>입력하세요</p>
+							<fieldset class="fp_form_fieldset">
+								<legend>검색</legend>
+								<div class="fp_input_w"><input type="text" class="fp_input" placeholder="예) 서울특별시 입주구 입주로 12"></div>
+								<a href="javascript:;" class="btn_fp_submit"><span class="hdtext">검색</span></a>
+							</fieldset>
+						</div>
+					</div>
+					<div class="full_popup_auto_row">
+						<!-- 내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다. -->
+					</div>
+					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">닫기</span></a>
 				</div>
 			</div>
-		</div>
-		<!-- // popup -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				var designPopup = new DesignPopup({
-					selector: "#samplePopup"
-				});
+			<!-- // popup -->
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					var designPopup = new DesignPopup({
+						selector: "#samplePopup"
+					});
 
-                designPopup.popupShow();
-			});
-		</script>
-	</div>
+					designPopup.popupShow();
+				});
+			</script>
+		</div>
+	</form>
 </body>
 </html>
