@@ -16,17 +16,109 @@
 </head>
 
 <body class="front_body">
-	<div class="page_wrap">
-		<section class="middle_wrap">
-			<p>Pretend</p>
-			<p style="font-family: 'SUITE';font-size:30px;font-weight:400;">1:1 문의</p>
-			<p style="font-family: 'SUITE';font-size:30px;font-weight:500;">1:1 문의</p>
-			<p style="font-family: 'SUITE';font-size:30px;font-weight:600;">1:1 문의</p>
-			<p style="font-family: 'SUITE';font-size:30px;font-weight:700;">1:1 문의</p>
-			<p style="font-family: 'SUITE';font-size:30px;font-weight:800;">1:1 문의</p>
-			<p style="font-family: 'SUITE';font-size:30px;font-weight:900;">1:1 문의</p>
-		</section>
-	</div>
+	<form>
+		<div class="page_wrap">
+			<header class="header_wrap top_layer_wrap dtype2">
+				<hgroup class="hgroup_pixin top_layer_content">
+					<div class="header_left_layer"><a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a></div>
+					<h1 class="header_top_title">자랑해요</h1>
+				</hgroup>
+			</header>
+			<section class="middle_wrap type3">
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.
+			</section>
+			<!-- popup -->
+			<div class="popup_wrap" id="answerPopup">
+				<div class="bg_dim"></div>
+				<div class="popup_modal_box_zone">
+					<div class="popup_modal_box_wrap">
+						<div class="popup_modal_box_inner">
+							<div class="popup_modal_box">
+								<div class="modal_contents_row">
+									<p class="modal_contents_title">댓글</p>
+									<div class="modal_contents_form">
+										<textarea rows="10" cols="10" placeholder="댓글 내용을 작성해주세요." class="form_textarea"></textarea>
+									</div>
+								</div>
+								<div class="modal_btn_row">
+									<a href="javascript:;" class="btn_modal_submit type2 close_trigger">취소</a>
+									<a href="javascript:;" class="btn_modal_submit close_trigger">등록</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // popup -->
+			<script>
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				document.addEventListener("DOMContentLoaded", function() {
+					var answerPopup = new DesignPopup({
+						selector: "#answerPopup"
+					});
+					if (url_2 === "answer") {
+						// 호출
+						answerPopup.popupShow();
+					}
+				});
+			</script>
+		</div>
+	</form>
 </body>
 
 </html>

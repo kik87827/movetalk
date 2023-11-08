@@ -5,27 +5,70 @@
     <form>
         <div class="page_wrap">
             <div class="detail_header_wrap top_layer_wrap">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="detail_photo_img"><img src="./assets/images/temp_1080x700.png" alt=""></div>
+                <div class="top_layer_content">
+                    <div class="swiper-container detail_photo_container" id="detail_photo_container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="detail_photo_img"><img src="./assets/images/temp_1080x700.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_02.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_03.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_04.png" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_05.png" alt=""></div>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_02.png" alt=""></div>
+                    </div>
+                    <div class="header_both_layer_group">
+                        <div class="header_left_layer"><a href="javascript:;" class="btn_history_back type2"><span class="hdtext">뒤로가기</span></a></div>
+                        <div class="header_right_layer"><a href="javascript:;" class="btn_header_like"><span class="hdtext">좋아요</span></a></div>
+                    </div>
+                    <div class="detail_header_content_wrap">
+                        <div class="detail_current_count_row">
+                            <div class="detail_current_count"><span class="d_count_current">1</span> / <span class="d_count_length"></span></div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_03.png" alt=""></div>
+                        <div class="detail_primary_box">
+                            <h1 class="detail_primary_title">CJ익스프레스</h1>
+                            <p class="detail_primay_sub_copy">안녕하세요, 서울의 전지역 이사를 책임지고 있는 CJ익스프레스 용산점입니다.</p>
+                            <ul class="detail_data_count_list">
+                                <li>
+                                    <div class="detail_data_count_item">
+                                        <i class="detail_data_ico ico_star"></i>
+                                        <div class="data_summary_text_g">
+                                            <span class="data_summary_count">4.6</span>
+                                            <span class="data_summary_unit">(545)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="detail_data_count_item">
+                                        <i class="detail_data_ico ico_heart"></i>
+                                        <div class="data_summary_text_g">
+                                            <span class="data_summary_count">135</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_04.png" alt=""></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="detail_photo_img"><img src="./assets/images/temp_1080x700_05.png" alt=""></div>
-                        </div>
+                    </div>
+                    <div class="detail_tab_item_row">
+                        <div class="tab_item_list_wrap">
+                            <ul class="tab_item_list">
+                                 <li><a href="javascript:;" class="tab_item active"><span class="tab_item_text">메뉴</span></a></li>
+                                 <li><a href="javascript:;" class="tab_item"><span class="tab_item_text">업체정보</span></a></li>
+                                 <li><a href="javascript:;" class="tab_item"><span class="tab_item_text">리뷰보기</span></a></li>
+                            </ul>
+                         </div>
                     </div>
                 </div>
             </div>
-            <section class="middle_wrap type2">
+            <section class="middle_wrap type3">
                 내용이 들어갑니다.<br>
                 내용이 들어갑니다.<br>
                 내용이 들어갑니다.<br>
@@ -41,10 +84,22 @@
                 내용이 들어갑니다.<br>
                 내용이 들어갑니다.
             </section>
-            <div class="bottom_layer_wrap">
-                
+            <div class="bottom_layer_wrap type2">
+                <a href="javascript:;" class="btn_page_top"><span class="hdtext">페이지상단</span></a>
+                <div class="bottom_layer_content btn_bottom_row">
+                    <a href="#" class="btn_submit_box type2">
+                        <span class="btn_submit_box_text">견적문의</span>
+                    </a>
+                    <a href="#" class="btn_submit_box">
+                        <span class="btn_submit_box_text">전화문의</span>
+                    </a>
+                </div>
             </div>
         </div>
+        <script>
+            detailTopSwiper();
+            activeToggle([".btn_header_like"])
+        </script>
     </form>
 </body>
 </html>

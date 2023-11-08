@@ -17,6 +17,7 @@
     &:after{}
 }
 .tab_item_text{display:inline-block;font-size:15px;font-weight:700;font-family: 'SUITE','Pretendard', Dotum;opacity:.4;}
+.tab_content_wrap{margin-top:32px;}
 /* // component */
 
 
@@ -42,9 +43,18 @@
 .popup_modal_box_wrap{display:table;table-layout: fixed;top:0;left:0;width:100%;height:100%;position:absolute;text-align: center;}
 .popup_modal_box_inner{display:table-cell;vertical-align: middle;padding:40px;}
 .popup_modal_box{max-width:280px;margin:0 auto;border-radius:15px;background:#fff;opacity:0;transition:.4s; display:flex;flex-direction: column;}
-.modal_contents_row{flex:1;min-height:120px;padding:13px;display:flex;align-items: center; justify-content: center; box-sizing: border-box;flex-direction: column;}
-.modal_btn_row{flex:0;padding:0 13px 13px;}
-.btn_modal_submit{background:#00c6b1;letter-spacing:2px;padding:12px;color:#fff;display:block;border-radius:10px;text-align:center;font-size:16px;font-weight:700; font-family: 'SUITE','Pretendard', Dotum;}
+.modal_contents_row{flex:1;min-height:120px;padding:13px;display:flex;align-items: center; justify-content: center; box-sizing: border-box;flex-direction: column;
+    > *{width:100%;}
+}
+.modal_contents_title{margin:7px 20px 20px;font-size:18px;color:#232a35; font-family: 'SUITE','Pretendard', Dotum; font-weight:700;}
+.modal_contents_form{}
+.form_textarea{border:0;background:#f4f4f4; resize:none;width:100%;box-sizing: border-box;height:103px;border-radius:6px;font-size:14px;padding:14px;
+    &::-webkit-input-placeholder{text-align: center;}
+}
+.modal_btn_row{flex:0;padding:0 13px 13px;display:flex;gap:11px;}
+.btn_modal_submit{flex:1;background:#00c6b1;letter-spacing:2px;padding:12px;color:#fff;display:block;border-radius:10px;text-align:center;font-size:16px;font-weight:700; font-family: 'SUITE','Pretendard', Dotum;
+    &.type2{background:#232a35;}
+}
 .bg_dim{display:block;width:100%;height:100%;position:fixed;top:0;left:0;z-index:0;background:#2c3035;opacity:0;transition:.4s;}
 
 .modal_main_message{color:#232323; font-size:18px; font-weight:700; line-height:1.4;word-break: keep-all;}
@@ -95,3 +105,62 @@ input.fp_input{padding:0 18px;height:100%;outline:0;appearance: none;font-size:1
 }
 /* // 공통 popup */
 
+
+/* detail */
+.detail_photo_container{
+    position:absolute;top:0;left:0;width:100%; z-index:0;
+    &.swiper-container{}
+     .swiper-wrapper{}
+     .swiper-slide{
+    }
+}
+.detail_photo_img{position:relative;height:192px;
+    &:after{display:block;content:'';width:100%;height:100%;background:url("../images/bg_detail_dim.png") repeat-x 0 0/cover;opacity:.2;}
+    img{vertical-align: top; @include dataImage2}
+}
+.header_both_layer_group{position:absolute;top:0;left:0;width:100%;}
+
+.detail_header_wrap{
+    .top_layer_content{
+
+        padding:102px 0 0 0;
+    }
+}
+.detail_header_content_wrap{position:relative;  pointer-events: none; margin:0 20px 0;}
+
+.detail_current_count_row{text-align: right;margin-bottom:10px;}
+.detail_current_count{background:rgba(35,42,53,.65);color:#fff;font-size:9px;line-height:1;white-space:nowrap;font-weight:500;display:inline-block;border-radius:100px;padding:5px 10px;}
+.d_count_current{}
+.d_count_length{}
+
+.detail_primary_box{background:rgba(255,255,255,.9);padding:25px 20px;border:1px solid #dddddd;border-radius:10px;text-align: center;box-sizing: border-box; min-height:157px;}
+
+.detail_primary_title{color:#101731;font-size:22px;font-weight:800;font-family: 'SUITE','Pretendard', Dotum;}
+.detail_primay_sub_copy{margin-top:12px;line-height:1.4;font-size:13px;color:#707070;}
+.detail_data_count_list{
+    margin-top:12px; display:flex; justify-content: center; align-items: center;
+    > li{
+        padding-right:22px; position:relative;
+        &:last-of-type{padding-right:0;
+            &:after{display:none;}
+        }
+        &:after{
+            display:block;content:'';width:1px;height:11px;background:#b3b3b3; position:absolute;top:50%;right:11px;transform: translateY(-50%);
+        }
+    }
+}
+.detail_data_count_item{display:flex;gap:5px;align-items: center;}
+.detail_data_ico{
+    display:inline-block;width:19px;  background-position:50% 50%;background-size:100% auto; background-repeat:no-repeat;
+    &.ico_star{background-image:url("../images/ico_star_57.png");width:19px;height:18px;}
+    &.ico_heart{background-image:url("../images/ico_heart_45.png");width:15px;height:13.33333333333333px;}
+}
+.detail_data_count_item{}
+.data_summary_text_g{line-height:1;display:flex;align-items: center;font-size:15px;font-family: 'SUITE','Pretendard', Dotum;}
+.data_summary_count{font-weight:700}
+.data_summary_unit{color:#232323}
+
+.detail_primary_title{}
+.detail_primay_sub_copy{}
+
+.detail_tab_item_row{margin:20px 20px 0;}

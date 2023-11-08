@@ -59,14 +59,35 @@ function resizeAction(callback) {
 function layoutFunc() {
   const page_wrap = document.querySelector(".page_wrap");
   const top_layer_wrap = document.querySelector(".top_layer_wrap");
+  const top_layer_wrap_dtype2 = document.querySelector(".top_layer_wrap.dtype2");
   const top_layer_content = document.querySelector(".top_layer_content");
   const bottom_layer_wrap = document.querySelector(".bottom_layer_wrap");
   const bottom_layer_content = document.querySelector(".bottom_layer_content");
+  const btn_page_top = document.querySelector(".btn_page_top");
 
   layerLayout();
   resizeAction(() => {
     layerLayout();
   });
+  window.addEventListener("scroll", (e) => {
+    if (!!top_layer_wrap_dtype2) {
+      if (window.scrollY > 0) {
+        top_layer_wrap_dtype2.classList.remove("dtype2");
+      } else {
+        top_layer_wrap_dtype2.classList.add("dtype2");
+      }
+    }
+  });
+
+  if (!!btn_page_top) {
+    btn_page_top.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+    });
+  }
 
   function layerLayout() {
 
@@ -246,156 +267,92 @@ DesignPopup.prototype.bindEvent = function() {
   }
 };
 
-/**
- * 디자인 모달
- * @param {*} option
- */
-function DesignModal(option) {
-  this.title = option.title;
-  this.message = option.message;
-  this.domHtml = document.querySelector("html");
-  this.domBody = document.querySelector("body");
-  this.pagewrap = document.querySelector(".page_wrap");
-  this.design_modal_wrap = null;
-  this.btn_dmsmidentify = null;
-  this.btn_dmsmcancel = null;
-  this.duration = option.duration !== undefined ? option.duration : 400;
-  this.initShow(option);
+function categorySwiper(target) {
+  let swiper_menu_obj = null;
+  const swiper_menu_swiper = document.querySelector(target);
+  const swiper_menu_slide = !!swiper_menu_swiper ? swiper_menu_swiper.querySelectorAll(".swiper-slide") : null;
+  if (!!swiper_menu_slide) {
+    if (swiper_menu_obj !== null) {
+      swiper_menu_obj.update();
+    } else {
+      swiper_menu_obj = new Swiper(target, {
+        slidesPerView: 'auto',
+        slidesPerGroupAuto: true,
+        freeMode: true,
+      });
+    }
+  }
 }
 
-DesignModal.prototype.initShow = function(option) {
-  var innerPublish = "";
-  var objThis = this;
-  let confirmPublish =
-    option.type === "confirm" ?
-    `취소` :
-    `닫기`;
-  /* 
-  innerPublish += "<div class='design_modal_wrap'>";
-  innerPublish += "  <div class='bg_design_modal'></div>";
-  innerPublish += "  <div class='design_modal_w'>";
-  innerPublish += "          <div class='design_modal'>";
 
-  innerPublish += "              <div class='design_modal_cont_w'><div class='design_modal_text'></div></div>";
-  innerPublish += "              <div class='btn_dmsm_wrap'>";
-  if (option.type === "confirm") {
-    innerPublish += "              <a href='javascript:;' class='btn_dmsm close_dmtrigger btn_dmsmcancel'>취소</a>";
-  }
-  innerPublish += "                  <a href='javascript:;' class='btn_dmsm close_dmtrigger btn_dmsmidentify'>확인</a>";
-  innerPublish += "              </div>";
-  innerPublish += "          </div>";
-  innerPublish += "  </div>";
-  innerPublish += "</div>";
- */
-  innerPublish = `
-  <div class='design_modal_wrap'>
-    <div class='design_modal_tb'>
-      <div class='design_modal_td'>
-        <div class='bg_design_modal'></div>
-        <div class='design_modal'>
-          <div class='design_modal_cont_w'>
-            <div class='design_modal_maintext'></div>
-            <div class='design_modal_subtext'></div>
-          </div>
-          <div class='btn_dmsm_wrap'>
-          
-          <a href='javascript:;' class='btn_dmsm close_dmtrigger btn_dmsmcancel'>${confirmPublish}</a>
-          <a href='javascript:;' class='btn_dmsm close_dmtrigger btn_dmsmidentify'>확인</a>
-          </div>
-          <a href='javascript:;' class='btn_modal_close'><span class='hdtext'>닫기</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
-
-  this.modalparent = document.createElement("div");
-  this.pagewrap.appendChild(this.modalparent);
-  this.modalparent.classList.add("design_modal_insert_wrap");
-  this.modalparent.innerHTML = innerPublish;
-  this.closetrigger = document.querySelectorAll(".close_dmtrigger");
-  this.design_modal_wrap = document.querySelector(".design_modal_wrap");
-  this.btn_modal_close = document.querySelector(".btn_modal_close");
-
-  if (option.type === "confirm" || option.type === "alert") {
-    this.design_modal_tit = document.querySelector(".design_modal_tit");
-    this.design_modal_text = document.querySelector(".design_modal_maintext");
-    this.design_modal_subtext = document.querySelector(".design_modal_subtext");
-    this.btn_dmsmidentify = document.querySelector(".btn_dmsmidentify");
-
-    if (!!option.main_message) {
-      this.design_modal_text.innerHTML = option.main_message;
+function detailTopSwiper() {
+  let detail_swiper_obj = null;
+  const detail_header_wrap = document.querySelector(".detail_header_wrap");
+  const detail_photo_swiper = document.querySelector("#detail_photo_container");
+  const d_count_current = detail_header_wrap.querySelector(".d_count_current");
+  const d_count_length = detail_header_wrap.querySelector(".d_count_length");
+  const detail_photo_slide = !!detail_photo_swiper ? detail_photo_swiper.querySelectorAll(".swiper-slide") : null;
+  if (!!detail_photo_slide) {
+    if (detail_swiper_obj !== null) {
+      detail_swiper_obj.update();
     } else {
-      this.design_modal_text.remove();
-    }
-
-    if (!!option.sub_message) {
-      this.design_modal_subtext.innerHTML = option.sub_message;
-
-    } else {
-      this.design_modal_subtext.remove();
+      d_count_length.textContent = detail_photo_slide.length;
+      detail_swiper_obj = new Swiper("#detail_photo_container", {
+        speed: 1000,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        loop: true
+      });
+      detail_swiper_obj.on("slideChange", () => {
+        d_count_current.textContent = detail_swiper_obj.realIndex + 1;
+      });
     }
   }
-  if (option.type === "confirm") {
-    this.btn_dmsmcancel = document.querySelector(".btn_dmsmcancel");
-  }
-  if (option.type === "title") {
-    this.design_modal_tit.innerHTML = option.title;
-  }
+}
 
-  this.bindEvent(option);
-};
-DesignModal.prototype.show = function() {
-  this.pagewrap.style.zIndex = 0;
-  this.domHtml.classList.add("touchDis");
+function activeItemGroup(items) {
+  const itemTarget = items;
+  if (!!itemTarget) {
+    itemTarget.forEach((item) => {
+      const loopItem = document.querySelectorAll(item);
+      if (!!loopItem) {
+        loopItem.forEach((element) => {
+          const elementObj = element;
+          elementObj.addEventListener("click", (e) => {
+            const eventItem = e.currentTarget;
+            const elementParent = eventItem.closest("[data-parent]");
+            const elementNot = elementParent.querySelectorAll(item)
+            if (!!elementNot) {
+              elementNot.forEach((notItem) => {
+                if (notItem !== eventItem) {
+                  notItem.classList.remove("active");
+                }
+              })
+            }
+            eventItem.classList.toggle("active");
+          });
+        })
+      }
+    });
+  }
+}
 
-  this.design_modal_wrap.classList.add("active");
-  setTimeout(() => {
-    this.design_modal_wrap.classList.add("motion");
-  }, 30);
-};
-DesignModal.prototype.hide = function() {
-  var objThis = this;
-  this.design_modal_wrap.classList.remove("motion");
-  setTimeout(function() {
-    objThis.design_modal_wrap.classList.remove("active");
-    document.querySelector(".design_modal_insert_wrap").remove();
-    objThis.design_modal_wrap.remove();
-    objThis.domHtml.classList.remove("touchDis");
-  }, 530);
-};
-DesignModal.prototype.bindEvent = function(option) {
-  var objThis = this;
-  let btn_close_item = [this.btn_modal_close, ...this.closetrigger];
-  btn_close_item.forEach((element, index) => {
-    element.addEventListener(
-      "click",
-      function() {
-        objThis.hide();
-      },
-      false
-    );
-  });
-  if (this.btn_dmsmidentify !== null) {
-    this.btn_dmsmidentify.addEventListener(
-      "click",
-      function() {
-        if (option.identify_callback !== undefined) {
-          option.identify_callback();
-        }
-      },
-      false
-    );
+function activeToggle(items) {
+  const itemTarget = items;
+  if (!!itemTarget) {
+    itemTarget.forEach((item) => {
+      const loopItem = document.querySelectorAll(item);
+      if (!!loopItem) {
+        loopItem.forEach((element) => {
+          const elementObj = element;
+          elementObj.addEventListener("click", (e) => {
+            const eventItem = e.currentTarget;
+            eventItem.classList.toggle("active");
+          });
+        })
+      }
+    });
   }
-  if (this.btn_dmsmcancel !== null) {
-    this.btn_dmsmcancel.addEventListener(
-      "click",
-      function() {
-        if (option.cancel_callback !== undefined) {
-          option.cancel_callback();
-        }
-      },
-      false
-    );
-  }
-};
+}
