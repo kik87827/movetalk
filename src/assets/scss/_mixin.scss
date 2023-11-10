@@ -23,3 +23,7 @@ $primary : #00c6b1;
 @mixin clamp ($count) {
     word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:$count;overflow: hidden;
 }
+
+@mixin suite{
+    font-family: 'SUITE','Pretendard', Dotum;
+}

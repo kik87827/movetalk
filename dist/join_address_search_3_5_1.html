@@ -30,60 +30,24 @@
 							<p class="fp_form_copy"><strong>읍, 면, 동, 도로명주소</strong>를 <br>입력하세요</p>
 							<fieldset class="fp_form_fieldset">
 								<legend>검색</legend>
-								<div class="fp_input_w"><input type="text" class="fp_input" placeholder="예) 서울특별시 입주구 입주로 12"></div>
+								<div class="fp_input_w input_package">
+									<input type="text" class="fp_input" placeholder="예) 서울특별시 입주구 입주로 12">
+									<a href="javascript:;" class="btn_input_reset"><span class="hdtext">리셋</span></a>
+								</div>
 								<a href="javascript:;" class="btn_fp_submit"><span class="hdtext">검색</span></a>
 							</fieldset>
 						</div>
 					</div>
-					<div class="full_popup_auto_row">
-						<!-- 내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다. -->
+					<div class="full_popup_auto_row type2">
+
 					</div>
 					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">닫기</span></a>
 				</div>
 			</div>
 			<!-- // popup -->
 			<script>
+				inputPackageFunc();
+
 				document.addEventListener("DOMContentLoaded", function() {
 					var addressPopup = new DesignPopup({
 						selector: "#addressPopup"

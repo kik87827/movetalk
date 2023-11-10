@@ -4,7 +4,7 @@
 <body class="front_body">
     <form>
         <div class="page_wrap">
-            <header class="header_wrap top_layer_wrap">
+            <header class="header_wrap top_layer_wrap dtype2">
                 <hgroup class="hgroup_pixin top_layer_content">
                     <div class="header_left_layer"><a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a></div>
                     <h1 class="header_top_title">회원가입</h1>
@@ -14,18 +14,18 @@
                 <div class="agree_form_zone">
                     <div class="agree_total_row">
                         <div class="props_item type2">
-                            <input type="checkbox" class="props_form" id="idsave">
-                            <label for="idsave" class="props_label">전체동의</label>
+                            <input type="checkbox" class="props_form" id="total_agree">
+                            <label for="total_agree" class="props_label">전체동의</label>
                         </div>
                     </div>
-                    <div class="agree_detail_row">
+                    <div class="agree_detail_row" id="tail_agree">
                         <ul class="agree_detail_list">
                             <li>
                                 <div class="agree_detail_event_bar">
                                     <div class="ade_main_cols">
                                         <div class="props_item">
                                             <input type="checkbox" class="props_form" id="terms_01">
-                                            <label for="terms_01" class="props_label">이용약관</label>
+                                            <label for="terms_01" class="props_label type2">이용약관</label>
                                         </div>
                                     </div>
                                     <div class="ade_btn_cols">
@@ -48,7 +48,7 @@
                                     <div class="ade_main_cols">
                                         <div class="props_item">
                                             <input type="checkbox" class="props_form" id="terms_02">
-                                            <label for="terms_02" class="props_label">개인정보 취급방침</label>
+                                            <label for="terms_02" class="props_label type2">개인정보 취급방침</label>
                                         </div>
                                     </div>
                                     <div class="ade_btn_cols">
@@ -71,7 +71,7 @@
                                     <div class="ade_main_cols">
                                         <div class="props_item">
                                             <input type="checkbox" class="props_form" id="terms_03">
-                                            <label for="terms_03" class="props_label">전자서비스거래 이용약관</label>
+                                            <label for="terms_03" class="props_label type2">전자서비스거래 이용약관</label>
                                         </div>
                                     </div>
                                     <div class="ade_btn_cols">
@@ -100,6 +100,16 @@
                     </a>
                 </div>
             </div>
+            <script>
+                toggleList();
+
+                document.querySelector("#total_agree").addEventListener("click",(e)=>{
+                    const eventItem = e.currentTarget;
+                    document.querySelectorAll("#tail_agree .props_form").forEach((item)=>{
+                        item.checked = eventItem.checked;
+                    });
+                });
+            </script>
         </div>
     </form>
 </body>

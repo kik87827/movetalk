@@ -92,6 +92,11 @@
             </div>
             <!-- // popup -->
             <script>
+                window.addEventListener("load",()=>{
+                    maxUnityFunc([".btn_inline_control"]);
+                })
+
+
                 // 퍼블확인용
                 let url = window.location.href.split('?')[1];
                 let url_2 = url !== undefined ? url.split('#')[0] : null;
