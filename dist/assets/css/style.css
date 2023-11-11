@@ -2001,6 +2001,9 @@ input.props_form:disabled {
 .btn_field_submit_wrap {
   margin-top: 48px;
 }
+.btn_field_submit_wrap.type2 {
+  margin-top: 15px;
+}
 
 .btn_field_submit {
   border-radius: 5px;
@@ -2506,4 +2509,9 @@ input.props_form:disabled {
 .detail_tab_item_row {
   margin: 20px 20px 0;
 }
+
+/* guide */
+/* list */
+/* paging */
+/* view */
 /*# sourceMappingURL=style.css.map */
