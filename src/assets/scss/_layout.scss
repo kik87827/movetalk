@@ -1,9 +1,9 @@
 /* layout */
 
 html:not(.touchmode){
-    ::-webkit-scrollbar {width:rem(10);}
-    ::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: rem(10);background-clip: padding-box;border: rem(2) solid transparent;}
-    ::-webkit-scrollbar-track {background-color: #fff;border-radius: rem(10);box-shadow: inset 0px 0px rem(5) white;}
+    ::-webkit-scrollbar {width:10px;}
+    ::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: 10px;background-clip: padding-box;border: 2px solid transparent;}
+    ::-webkit-scrollbar-track {background-color: #fff;border-radius: 10px;box-shadow: inset 0px 0px 5px white;}
 }
 
 .front_body{

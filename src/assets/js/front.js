@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   commonInit();
-  
+  formFunc();
 });
 window.addEventListener("load", () => {
   layoutFunc();
@@ -464,4 +464,27 @@ function swiperFunc(option) {
       });
     }
   }
+}
+
+function formFunc(){
+  // form_select
+  const form_select = document.querySelectorAll(".form_select");
+
+  form_select.forEach((item)=>{
+    const thisTarget = item;
+    if(thisTarget.value === "0"){
+      thisTarget.classList.add("ready");
+    }else{
+      thisTarget.classList.remove("ready");
+    }
+  });
+
+  addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
+    const thisTarget = e.target;
+    if(thisTarget.value === "0"){
+      thisTarget.classList.add("ready");
+    }else{
+      thisTarget.classList.remove("ready");
+    }
+  });
 }
