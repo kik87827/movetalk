@@ -2344,6 +2344,9 @@ input.props_form:disabled {
   color: #00c6b1;
   font-weight: 600;
 }
+.form_table_label.type2 {
+  color: #232a35;
+}
 
 .form_table_contents_row {
   margin-top: 12px;
@@ -3009,6 +3012,10 @@ select.combo_select {
   color: #575757;
   line-height: 1.4;
 }
+.list_tdtext.ing_type2 {
+  color: #0054ff;
+  font-weight: 500;
+}
 
 .list_tdtitle {
   display: inline-block;
@@ -3060,6 +3067,27 @@ select.combo_select {
   background: url("../images/ico_toggle_color_50.png") no-repeat 50% 50%/100% auto;
   border-radius: 100%;
   flex: 0 0 17px;
+}
+
+.btn_contents_end_wrap {
+  text-align: right;
+  margin-top: 23px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn_boxitem {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "SUITE", "Pretendard", Dotum;
+  background: #00c6b1;
+  border-radius: 5px;
+  padding: 11px;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 100px;
+  color: #fff;
 }
 
 /* paging */
