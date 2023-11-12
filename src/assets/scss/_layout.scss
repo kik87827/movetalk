@@ -10,7 +10,7 @@ html:not(.touchmode){
     overflow-x:hidden; position:relative;
 }
 .page_wrap{
-    min-width:rem(280);min-height:100vh; box-sizing: border-box; width:720px;margin:0 auto; position:relative; padding-top:70px;
+    min-width:280px;min-height:100vh; box-sizing: border-box; width:720px;margin:0 auto; position:relative; padding-top:70px;
     &.type2{padding-top:55px;}
     &:before, &:after{display:block;content:''; position:absolute;top:0;height:100%; background:#fff;width:100vw;z-index:50;}
     &:before{left:100%;}
