@@ -11,20 +11,93 @@
                 </hgroup>
             </header>
             <section class="middle_wrap type3">
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.<br>
-                내용이 들어갑니다.
+                <div class="form_table_wrap">
+                    <ul class="form_table_list">
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">닉네임</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <div class="form_getdata_text">속삭이는 몽자</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">이름</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <input type="text" class="form_input" value="홍길동">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">아이디</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <div class="form_getdata_text">asdfg@naver.com</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">비밀번호</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <input type="password" class="form_input" placeholder="기존 비밀번호">
+                                </div>
+                                <div class="form_content_block">
+                                    <input type="password" class="form_input" placeholder="새 비밀번호">
+                                </div>
+                                <div class="form_content_block">
+                                    <input type="password" class="form_input" placeholder="새 비밀번호 확인">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">휴대폰번호</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <div class="form_inline_group">
+                                        <input type="text" class="form_input" value="01012341234">
+                                        <a href="javascript:;" class="btn_inline_control"><span class="btn_inline_control_text">인증번호 발송</span></a>
+                                    </div>
+                                </div>
+                                <div class="form_content_block">
+                                    <div class="form_inline_group">
+                                        <input type="text" class="form_input" placeholder="인증번호 확인">
+                                        <a href="javascript:;" class="btn_inline_control"><span class="btn_inline_control_text">인증번호 확인</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">집주소</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <div class="form_inline_group">
+                                        <input type="text" class="form_input" placeholder="집주소">
+                                        <a href="javascript:;" class="btn_inline_control"><span class="btn_inline_control_text">주소찾기</span></a>
+                                    </div>
+                                </div>
+                                <div class="form_content_block">
+                                    <input type="text" class="form_input" placeholder="상세주소">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row"><p class="form_table_label">시공받을 주소</p></div>
+                            <div class="form_table_contents_row">
+                                <div class="form_content_block">
+                                    <div class="form_inline_group">
+                                        <input type="text" class="form_input" placeholder="시공받을 주소(선택)">
+                                        <a href="javascript:;" class="btn_inline_control"><span class="btn_inline_control_text">주소찾기</span></a>
+                                    </div>
+                                </div>
+                                <div class="form_content_block">
+                                    <input type="text" class="form_input" placeholder="시공받을 상세주소(선택)">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                 </div>
             </section>
             <div class="bottom_layer_wrap">
                 <div class="bottom_layer_content btn_bottom_row">
@@ -34,6 +107,11 @@
                 </div>
             </div>
         </div>
+        <script>
+            window.addEventListener("load",()=>{
+                maxUnityFunc([".btn_inline_control"]);
+            })
+        </script>
     </form>
 </body>
 </html>

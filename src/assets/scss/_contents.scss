@@ -370,6 +370,11 @@ strong.emp{}
     &.type2{color:#232a35;}
 }
 .form_table_contents_row{margin-top:12px;}
+.form_content_block{
+    margin-bottom:20px;
+    &:last-of-type{margin-bottom:0;}
+}
+.form_getdata_text{box-sizing: border-box;font-size:14px;line-height:1.4;font-weight:600;color:#232a35;}
 .form_textarea_wrap{
     .form_textarea{height: 110px; font-weight:600;line-height:1.4;}
 }
