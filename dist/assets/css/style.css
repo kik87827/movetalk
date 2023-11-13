@@ -1071,6 +1071,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   text-align: center;
   height: 100%;
   padding: 0 60px;
+  position: relative;
 }
 
 .header_top_title {
@@ -1346,6 +1347,26 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   width: 56px;
   height: 56px;
   background: #ccf4ef url("../images/ico_topgo.png") no-repeat 50% 50%/14px 17px;
+}
+.btn_page_top.type2 {
+  bottom: 20px;
+}
+
+.btn_bottom_box {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  right: 20px;
+  border-radius: 100%;
+  width: 56px;
+  height: 56px;
+  background: #ccf4ef url("../images/ico_write.png") no-repeat 50% 50%/22px 22px;
+}
+.btn_bottom_box.type2 {
+  bottom: 20px;
+}
+.btn_bottom_box.type3 {
+  bottom: calc(100% + 16px);
 }
 
 @media (max-width: 768px) {
@@ -2592,6 +2613,7 @@ input.file_origin::-ms-browse {
   top: 0;
   left: 0;
   width: 100%;
+  height: 70px;
 }
 
 .detail_header_wrap .top_layer_content {

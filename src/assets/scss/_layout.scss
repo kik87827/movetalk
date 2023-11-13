@@ -48,7 +48,7 @@ html:not(.touchmode){
     &:after{display:block;content:'';border:5px solid transparent;border-top-color:#232a35;width:0;height:0;position:absolute;top:50%;right:0;transform: translateY(-50%);margin-top:3px;}
 }
 
-.hgroup_pixin{display:flex;justify-content: center; align-items: center; text-align: center;height:100%; padding:0 60px;}
+.hgroup_pixin{display:flex;justify-content: center; align-items: center; text-align: center;height:100%; padding:0 60px; position:relative;}
 
 .header_top_title{font-size:21px;color:#101731; font-weight:700; font-family: 'SUITE','Pretendard', Dotum;}
 
@@ -166,7 +166,20 @@ html:not(.touchmode){
 }
 .menu_category_spec{font-size:11px;color:#232a35;margin:10px -11px 0;}
 
-.btn_page_top{display:block; position:absolute;bottom:100%;right:20px; border-radius:100%;width:56px;height:56px; background:#ccf4ef url("../images/ico_topgo.png") no-repeat 50% 50%/14px 17px;}
+.btn_page_top{display:block; position:absolute;bottom:100%;right:20px; border-radius:100%;width:56px;height:56px; background:#ccf4ef url("../images/ico_topgo.png") no-repeat 50% 50%/14px 17px;
+    &.type2{
+        bottom:20px;
+    }
+}
+
+.btn_bottom_box{display:block; position:absolute;bottom:100%;right:20px; border-radius:100%;width:56px;height:56px; background:#ccf4ef url("../images/ico_write.png") no-repeat 50% 50%/22px 22px;
+    &.type2{
+        bottom:20px;
+    }
+    &.type3{
+        bottom:calc(100% + 16px);
+    }
+}
 
 @media (max-width:768px){
     .page_wrap{
