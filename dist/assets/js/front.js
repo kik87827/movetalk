@@ -490,3 +490,12 @@ function formFunc() {
     }
   });
 }
+
+
+function dynamicToggle(target) {
+  addDynamicEventListener(document.body, 'click', target, function(e) {
+    const thisTarget = e.target;
+    e.preventDefault();
+    thisTarget.classList.toggle("active");
+  });
+}
