@@ -3277,6 +3277,37 @@ input.motion_checkbox:checked + .motion_checkbox_label {
   font-size: 13px;
 }
 
+.full_figure_list > li {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 20px;
+}
+.full_figure_list > li:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.full_figure_thum_wrap {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 52.0833333333%;
+}
+.full_figure_thum_wrap > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
 /* paging */
 .paging_wrap {
   margin-top: 18px;
