@@ -48,7 +48,7 @@ html:not(.touchmode){
     &:after{display:block;content:'';border:5px solid transparent;border-top-color:#232a35;width:0;height:0;position:absolute;top:50%;right:0;transform: translateY(-50%);margin-top:3px;}
 }
 
-.hgroup_pixin{display:flex;justify-content: center; align-items: center; text-align: center;height:100%; padding:0 60px; position:relative;width:100%;}
+.hgroup_pixin{display:flex;justify-content: center; align-items: center; text-align: center;height:100%; padding:0 60px; position:relative;width:100%;box-sizing: border-box;}
 
 .header_top_title{font-size:21px;color:#101731; font-weight:700; font-family: 'SUITE','Pretendard', Dotum;}
 
@@ -136,6 +136,9 @@ html:not(.touchmode){
     }
     &.type4{
         padding:0 20px 45px;
+    }
+    &.type5{
+        padding:0 0 45px;
     }
 }
 
