@@ -403,7 +403,7 @@ strong.emp{}
 .form_table_wrap{}
 .form_table_list{
     > li{
-        margin-bottom:33px;
+        margin-bottom:22px;
         &:last-of-type{margin-bottom:0;}
     }
 }
@@ -745,7 +745,15 @@ select.combo_select{
 .list_more_text{font-size:13px;color:#232a35;line-height:1;font-weight:600;display:inline-block;}
 .list_more_ico{display:block;width:17px;height:17px;background:url("../images/ico_toggle_color_50.png") no-repeat 50% 50%/100% auto; border-radius:100%;flex:0 0 17px;}
 .btn_contents_end_wrap{text-align: right;margin-top:23px;display:flex;justify-content: flex-end; gap:10px;}
-.btn_boxitem{font-size:16px;font-weight:700; @include suite;background:$primary;border-radius:5px;padding:11px;box-sizing: border-box; text-align: center; min-width:100px;color:#fff;}
+.btn_boxitem{display:inline-block;font-size:16px;font-weight:700; @include suite;background:$primary;border-radius:5px;padding:11px;box-sizing: border-box; text-align: center; min-width:100px;color:#fff;
+    &.type2{background-color:#232a35;}
+    &.small{min-width:70px;font-size:14px;padding:10px;}
+}
+
+.btn_boxitem_wrap{
+    display:flex;justify-content:flex-end; gap:10px; margin-top:17px;
+    .btn_boxitem{}
+}
 
 li.nodata_li{
     background:none;text-align:center; padding:100px 20px !important;
@@ -1003,7 +1011,69 @@ select.select_comp:disabled{background-color:#f7f7f7;color:#999999;opacity:1;}
         img{width: auto !important; height: auto !important;}
     }
 }
+.form_viewer_zone{}
+.form_viewer_group{
+    margin-bottom:40px;
+    &:last-of-type{margin-bottom:0}
+}
+.fv_boxgroup_wrap{
+    margin-bottom:22px;
+    &:last-of-type{margin-bottom:0}
+}
+.fv_boxgroup_title_row{display:flex;justify-content: space-between; gap:20px; align-items: center;}
+.fv_boxgroup_title{font-size:15px;color:#00c6b1;font-weight:600;}
+.fv_boxgroup_else_text{font-size:13px;color:#b5b5b5;font-weight:500;}
+.fv_boxgroup_content{margin-top:12px;}
+.fv_boxgroup_content.type2{border:1px solid #dddddd;padding:15px;border-radius:6px;}
+.board_contents_wrap{}
+.board_contents_inner{}
+.upload_render_list_wrap{border:1px solid #dddddd;padding:15px;border-radius:6px;}
+.upload_render_list_wrap.type2{padding:0;border:0;border-radius:0;}
+.upload_render_list{
+    display:flex; flex-wrap:wrap; gap:10px 0; margin:0 -12px;
+    > li{
+        flex:0 0 50%; width:50%; min-width:0; padding:0 12px; box-sizing: border-box;
+    }
+}
+.upload_photo{display:block;height:0;position:relative;overflow: hidden; padding-bottom:75%;}
+.upload_data_img{
+    overflow:hidden; position:relative; height:0;padding-bottom:75%; border-radius:9px; background:#f4f4f4 url("../images/ico_noimg_90x90.png") no-repeat 50% 50%/30px auto;
+    img{@include dataImage2}
+}
+.form_viewer_column{
+    margin-bottom:33px;
+    &:last-of-type{margin-bottom:0;}
+}
+.form_viewer_obj_group{border-bottom:1px solid #dddddd; padding-bottom:18px; display:flex;gap:16px;}
+.form_viewer_key{display:inline-block;font-size:14px;color:#3dafff;font-weight:500; white-space: nowrap;padding-top:2px;}
+.form_viewer_value{font-weight:700;color:#232323; font-size:17px;}
+.fv_boxgroup_wrap{}
+.fv_boxgroup_title_row{}
+.fv_boxgroup_title{}
+.fv_boxgroup_else_text{}
+.fv_boxgroup_content{}
+.fv_boxgroup_get_render{
+    font-size:13px;color:#232a35; line-height:1.4;
+    img{width:auto !important;height:auto !important;}
+    *{font-size:13px;color:#232a35; line-height:1.4;}
+}
+.board_contents_wrap{
+    background: #f4f4f4;
+    width: 100%;
+    box-sizing: border-box;
+    height: 110px;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 14px;
+    overflow-y:auto;
 
+    &::-webkit-scrollbar {width:10px;}
+    &::-webkit-scrollbar-thumb {}
+    &::-webkit-scrollbar-track {box-shadow: inset 0px 0px 5px transparent  !important;background-color:transparent !important;}
+}
+.fv_boxgroup_sub_item{margin-top:32px;}
+.fv_boxgroup_sub{font-size:13px; color:$primary; padding-bottom:12px;border-bottom:1px solid #dddddd;}
+.fv_boxgroup_cont{margin-top:15px;}
 
 /* intro */
 .sub_middle_visual_wrap{display:flex;align-items: center;padding:0 13px;}
