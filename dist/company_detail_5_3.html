@@ -19,7 +19,7 @@
 	<form>
 		<div class="page_wrap">
 			<div class="detail_header_wrap top_layer_wrap">
-				<div class="top_layer_content">
+				<div class="top_layer_content type2">
 					<div class="swiper-container detail_photo_container" id="detail_photo_container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
@@ -82,21 +82,112 @@
 					</div>
 				</div>
 			</div>
-			<section class="middle_wrap type3">
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.
+			<section class="middle_wrap type2">
+				<div class="column_item_wrap type3">
+					<div class="column_item">
+						<div class="column_item_inner">
+							<div class="column_fieldset_wrap">
+								<div class="column_fieldset_item">
+									<p class="column_fieldset_title">리뷰 / 평가를 남겨주세요</p>
+									<div class="form_textarea_wrap">
+										<textarea rows="10" cols="10" placeholder="후기를 남겨주세요(30자 이내)" class="form_textarea type2"></textarea>
+									</div>
+									<div class="eval_star_form">
+										<button type="button" class="eval_star"></button>
+										<button type="button" class="eval_star"></button>
+										<button type="button" class="eval_star"></button>
+										<button type="button" class="eval_star"></button>
+										<button type="button" class="eval_star"></button>
+									</div>
+									<div class="btn_boxitem_wrap">
+										<a href="#" class="btn_boxitem small">등록</a>
+									</div>
+								</div>
+							</div>
+							<div class="comment_list_wrap">
+								<ul class="comment_list">
+									<li>
+										<div class="comment_item">
+											<div class="comment_row define_star">
+												<div class="render_star_group">
+													<span class="render_star active"></span>
+													<span class="render_star active"></span>
+													<span class="render_star active"></span>
+													<span class="render_star"></span>
+													<span class="render_star"></span>
+												</div>
+											</div>
+											<div class="comment_row define_data">
+												<div class="comment_profile_wrap">
+													<span class="comment_profile_main">홍대꼼꼼이</span>
+													<span class="comment_profile_else">| 2023.10.30</span>
+												</div>
+											</div>
+											<div class="comment_row define_write">
+												<div class="comment_write_para">정말 깔끔하게 해주시네요!</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="comment_item">
+											<div class="comment_row define_star">
+												<div class="render_star_group">
+													<span class="render_star active"></span>
+													<span class="render_star active"></span>
+													<span class="render_star active"></span>
+													<span class="render_star"></span>
+													<span class="render_star"></span>
+												</div>
+											</div>
+											<div class="comment_row define_data">
+												<div class="comment_profile_wrap">
+													<span class="comment_profile_main">홍대꼼꼼이</span>
+													<span class="comment_profile_else">| 2023.10.30</span>
+												</div>
+											</div>
+											<div class="comment_row define_write">
+												<div class="comment_write_para">정말 깔끔하게 해주시네요!</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="comment_item">
+											<div class="comment_row define_star">
+												<div class="render_star_group">
+													<span class="render_star active"></span>
+													<span class="render_star active"></span>
+													<span class="render_star active"></span>
+													<span class="render_star"></span>
+													<span class="render_star"></span>
+												</div>
+											</div>
+											<div class="comment_row define_data">
+												<div class="comment_profile_wrap">
+													<span class="comment_profile_main">홍대꼼꼼이</span>
+													<span class="comment_profile_else">| 2023.10.30</span>
+												</div>
+											</div>
+											<div class="comment_row define_write">
+												<div class="comment_write_para">정말 깔끔하게 해주시네요!</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="column_item">
+						<div class="column_item_inner">
+							<p class="detail_column_para">입주톡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. <br>따라서 입주톡은 상품및 서비스거래에 대한 책임을 지지않습니다.</p>
+							<div class="emp_tape_item">
+								<div class="tape_inner_item">
+									<i class="ico_tape ico_customer"></i>
+									<span class="tape_text">입주톡 고객센터 : 1522 - 5871</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<div class="bottom_layer_wrap type2">
 				<a href="javascript:;" class="btn_page_top"><span class="hdtext">페이지상단</span></a>
@@ -112,6 +203,7 @@
 		</div>
 		<script>
 			detailTopSwiper();
+			evalStarFunc();
 			activeToggle([".btn_header_like"])
 		</script>
 	</form>

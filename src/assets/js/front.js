@@ -497,3 +497,58 @@ function dynamicToggle(target){
     thisTarget.classList.toggle("active");
 });
 }
+
+
+function evalStarFunc(){
+  const eval_star_form = document.querySelectorAll(".eval_star_form");
+  if(!!eval_star_form){
+    eval_star_form.forEach((item)=>{
+      const thisItem = item;
+      const thisItemStar = thisItem.querySelectorAll(".eval_star");
+      if(!!thisItemStar){
+        thisItemStar.forEach((evetTarget)=>{
+          evetTarget.addEventListener("click",(e)=>{
+            e.preventDefault();
+            const thisEvent = e.currentTarget;
+            const prevAllEvent = getPreviousSiblings(thisEvent);
+            const nextAllEvent = getNextSiblings(thisEvent);
+            console.log();
+            [...prevAllEvent,thisEvent].forEach((item)=>{
+              item.classList.add("active");
+            });
+            [...nextAllEvent].forEach((item)=>{
+              item.classList.remove("active");
+            });
+          })
+        });
+      }
+    });
+  }
+}
+
+
+function getPreviousSiblings(elem, filter) {
+  var sibs = [];
+  while (elem = elem.previousSibling) {
+      if (elem.nodeType === 3) continue; // ignore text nodes
+      if (!filter || filter(elem)) sibs.push(elem);
+  }
+  return sibs;
+}
+
+
+function getNextSiblings(elem, filter) {
+  var sibs = [];
+  var nextElem = elem.parentNode.firstChild;
+  do {
+      if (nextElem.nodeType === 3) continue; // ignore text nodes
+      if (nextElem === elem) continue; // ignore elem of target
+      if (nextElem === elem.nextElementSibling) {
+          if (!filter || filter(elem)) {
+              sibs.push(nextElem);
+              elem = nextElem;
+          }
+      }
+  } while(nextElem = nextElem.nextSibling)
+  return sibs;
+}
