@@ -183,6 +183,14 @@ html:not(.touchmode){
         bottom:calc(100% + 16px);
     }
 }
+.middle_design_title_wrap{margin-bottom:35px;}
+.middle_design_title_row{position:relative;overflow:hidden;padding:0 23px 0 20px; display:inline-block; margin:0 0 0 -20px;
+    &:before{display:block;content:'';width:100vw;background:#ccf5ef;height:15px;border-radius:100px;position:absolute;bottom:0;right:0;}
+}
+.middle_design_title{font-size:18px;font-weight:700;line-height:1; position:relative;z-index:1; padding-bottom:5px;
+    &:after{display:block;content:'';width:8px;height:8px;border-radius:100%;background:#00c5b1; position:absolute;bottom:6px;left:calc(100% + 4px)}
+}
+
 
 @media (max-width:768px){
     .page_wrap{

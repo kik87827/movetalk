@@ -319,6 +319,7 @@ input.props_form{
 }
 .field_other_item_row{
     margin-top:48px;display:flex;justify-content: center;align-items: center; gap:10px 14px;
+    &.type2{margin-top:70px;}
 }
 .field_other_copy{font-size:14px;color:#232323;font-weight:500;line-height:1.3;}
 .btn_field_other_link{font-size:14px;color:$primary;font-weight:700;line-height:1.3;}
@@ -428,6 +429,9 @@ strong.emp{}
     &.type2{
         .form_textarea{background:#fff;border:1px solid #dddddd;}
     }
+    &.htype2{
+        .form_textarea{height:166px;}
+    }
 }
 .terms_contents_wrap{
     background: #f4f4f4;
@@ -468,6 +472,12 @@ input.file_origin{display:block;position:absolute;top:0;left:0;opacity:0; cursor
         display: none;
     }
 }
+.form_file_upload_item{position:relative;}
+.btn_file_text_box{
+    display:inline-flex; gap:7px; align-items: center; background:$primary; border-radius:6px; padding:10px 16px;
+    &:before{display:block;content:'';width:12px;height:12px;background:url("../images/ico_download.png") no-repeat 50% 50%/100% auto; flex:0 0 12px;}
+}
+.btn_file_text{color:#fff;font-size:14px;display:inline-block;line-height:1; font-weight:600;}
 
 .upload_item_box{
     margin-top:12px; border:1px solid #ddd; border-radius:6px; padding:16px;
@@ -489,6 +499,11 @@ input.file_origin{display:block;position:absolute;top:0;left:0;opacity:0; cursor
     display:block;width:18px;height:20px; background:url("../images/ico_trash.png") no-repeat 50% 50%/100% auto; margin:0 auto;
 }
 
+.form_table_both{display:flex;justify-content: space-between; align-items: center; gap:20px;}
+
+.file_upload_current{color:#232a35;margin:10px 0 0 0;font-size:12px;line-height:1.3;font-weight:600;
+    display:none;
+}
 /* // form */
 
 
