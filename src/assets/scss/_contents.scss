@@ -189,8 +189,17 @@
     &.type2{
         &::-webkit-input-placeholder{text-align: left;}
     }
+    &.htype2{
+        height:123px;
+    }
 }
 .modal_btn_row{flex:0;padding:0 13px 13px;display:flex;gap:11px;}
+
+.modal_inner_title_row{text-align: center;padding:7px;box-sizing: border-box;margin-bottom:13px;}
+.modal_inner_title{font-size:18px;line-height:1;font-weight:700;}
+.modal_inner_contents{}
+
+
 .btn_modal_submit{flex:1;background:$primary;letter-spacing:2px;padding:12px;color:#fff;display:block;border-radius:10px;text-align:center;font-size:16px;font-weight:700; @include suite;
     &.type2{background:#232a35;}
 }
@@ -479,9 +488,17 @@ input.file_origin{display:block;position:absolute;top:0;left:0;opacity:0; cursor
         display: none;
     }
 }
-.form_file_upload_item{position:relative;}
+.form_file_upload_item{position:relative;
+    &.type2{
+        .btn_file_text_box{
+            background:#e5f9f7;border:1px solid $primary;
+            &:before{background-image:url("../images/ico_download_2.png")}
+        }
+        .btn_file_text{color:$primary;}
+    }
+}
 .btn_file_text_box{
-    display:inline-flex; gap:7px; align-items: center; background:$primary; border-radius:6px; padding:10px 16px;
+    display:inline-flex; gap:7px; align-items: center; background:$primary; border-radius:6px; padding:10px 16px; box-sizing: border-box;
     &:before{display:block;content:'';width:12px;height:12px;background:url("../images/ico_download.png") no-repeat 50% 50%/100% auto; flex:0 0 12px;}
 }
 .btn_file_text{color:#fff;font-size:14px;display:inline-block;line-height:1; font-weight:600;}

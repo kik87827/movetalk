@@ -1855,12 +1855,28 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .form_textarea.type2::-webkit-input-placeholder {
   text-align: left;
 }
+.form_textarea.htype2 {
+  height: 123px;
+}
 
 .modal_btn_row {
   flex: 0;
   padding: 0 13px 13px;
   display: flex;
   gap: 11px;
+}
+
+.modal_inner_title_row {
+  text-align: center;
+  padding: 7px;
+  box-sizing: border-box;
+  margin-bottom: 13px;
+}
+
+.modal_inner_title {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
 }
 
 .btn_modal_submit {
@@ -2664,6 +2680,16 @@ input.file_origin::-ms-browse {
 .form_file_upload_item {
   position: relative;
 }
+.form_file_upload_item.type2 .btn_file_text_box {
+  background: #e5f9f7;
+  border: 1px solid #00c6b1;
+}
+.form_file_upload_item.type2 .btn_file_text_box:before {
+  background-image: url("../images/ico_download_2.png");
+}
+.form_file_upload_item.type2 .btn_file_text {
+  color: #00c6b1;
+}
 
 .btn_file_text_box {
   display: inline-flex;
@@ -2672,6 +2698,7 @@ input.file_origin::-ms-browse {
   background: #00c6b1;
   border-radius: 6px;
   padding: 10px 16px;
+  box-sizing: border-box;
 }
 .btn_file_text_box:before {
   display: block;
