@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/_head.html')
+<body class="front_body">
+    <form>
+        <div class="page_wrap">
+            <header class="header_wrap top_layer_wrap dtype2">
+                <hgroup class="hgroup_pixin top_layer_content">
+                    <div class="header_left_layer"><a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a></div>
+                    <h1 class="header_top_title">기본정보</h1>
+                </hgroup>
+            </header>
+            <section class="middle_wrap type3">
+                <div class="form_table_wrap">
+                    <ul class="form_table_list">
+                        <li>
+                            <div class="form_table_label_row">
+                                <p class="form_table_label">아이디</p>
+                            </div>
+                            <div class="form_table_contents_row">
+                                <div class="form_getdata_text">asdf@naver.com</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row">
+                                <p class="form_table_label">비밀번호</p>
+                            </div>
+                            <div class="form_table_contents_row">
+                                <div class="form_inline_group">
+                                    <input type="password" class="form_input" placeholder="휴대폰번호" value="11232131">
+                                    <a href="javascript:;" class="btn_inline_control"><span class="btn_inline_control_text">인증번호 발송</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_table_label_row">
+                                <p class="form_table_label">휴대폰번호</p>
+                            </div>
+                            <div class="form_table_contents_row">
+                                <div class="form_inline_group">
+                                    <input type="text" class="form_input" value="01012341234">
+                                    <a href="javascript:;" class="btn_inline_control"><span class="btn_inline_control_text">변경</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <script>
+                window.addEventListener("load",()=>{
+                    maxUnityFunc([".btn_inline_control"]);
+                })
+            </script>
+        </div>
+    </form>
+</body>
+</html>

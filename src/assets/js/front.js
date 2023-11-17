@@ -60,6 +60,8 @@ function resizeAction(callback){
 function layoutFunc() {
   const page_wrap = document.querySelector(".page_wrap");
   const top_layer_wrap = document.querySelector(".top_layer_wrap");
+  const header_top_title = document.querySelector(".header_top_title");
+  const header_else_group = document.querySelector(".header_else_group");
   const top_layer_content = document.querySelector(".top_layer_content");
   const bottom_layer_wrap = document.querySelector(".bottom_layer_wrap");
   const bottom_layer_content = document.querySelector(".bottom_layer_content");
@@ -98,6 +100,10 @@ function layoutFunc() {
 
     if(!!page_wrap && !!bottom_layer_content){
       page_wrap.style.paddingBottom = bottom_layer_content.getBoundingClientRect().height + "px";
+    }
+
+    if(!!header_else_group){
+      header_else_group.style.width = (page_wrap.getBoundingClientRect().right - header_top_title.getBoundingClientRect().width - header_top_title.getBoundingClientRect().left - 30) + "px";
     }
   }
 }
