@@ -1920,6 +1920,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .form_textarea.bgtype2 {
   background-color: #edfbfb;
 }
+.form_textarea.bgtype3 {
+  background-color: #f6f6f6;
+}
 
 .modal_btn_row {
   flex: 0;
@@ -2802,6 +2805,9 @@ input.file_origin::-ms-browse {
 .form_file_upload_item.type2 .btn_file_text {
   color: #00c6b1;
 }
+.form_file_upload_item.no_ico .btn_file_text_box:before {
+  display: none;
+}
 
 .btn_file_text_box {
   display: inline-flex;
@@ -3606,6 +3612,9 @@ select.combo_select {
   gap: 10px;
   margin-top: 17px;
 }
+.btn_boxitem_wrap.type2 {
+  padding: 0 0 25px;
+}
 .btn_boxitem_wrap .btn_boxitem {
   display: flex;
   align-items: center;
@@ -3900,6 +3909,14 @@ input.motion_checkbox:checked + .motion_checkbox_label {
 .summary_render_spec_wrap .word_keyword {
   margin-bottom: 7px;
 }
+.summary_render_sub {
+  color: #00c6b1;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
 .summary_title_row {
   display: flex;
   align-items: center;
@@ -4432,6 +4449,12 @@ input.comment_input {
 
 .fv_boxgroup_content.type3 {
   background: #f6f6f7;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.fv_boxgroup_content.type4 {
+  background: #f6f6f6;
   padding: 15px;
   border-radius: 6px;
 }

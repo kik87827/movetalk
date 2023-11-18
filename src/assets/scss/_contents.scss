@@ -209,6 +209,7 @@
         height:123px;
     }
     &.bgtype2{background-color:#edfbfb;}
+    &.bgtype3{background-color:#f6f6f6;}
 }
 .modal_btn_row{flex:0;padding:0 13px 13px;display:flex;gap:11px;}
 
@@ -524,6 +525,11 @@ input.file_origin{display:block;position:absolute;top:0;left:0;opacity:0; cursor
             &:before{background-image:url("../images/ico_download_2.png")}
         }
         .btn_file_text{color:$primary;}
+    }
+    &.no_ico{
+        .btn_file_text_box{
+            &:before{display:none;}
+        }
     }
 }
 .btn_file_text_box{
@@ -843,6 +849,7 @@ select.combo_select{
 
 .btn_boxitem_wrap{
     display:flex;justify-content:flex-end; gap:10px; margin-top:17px;
+    &.type2{padding:0 0 25px;}
     .btn_boxitem{display:flex;align-items: center;justify-content: center;}
 }
 
@@ -970,6 +977,7 @@ input.motion_checkbox{appearance: none;width:0;height:0;box-sizing: border-box;o
     }
 }
 .summary_render_main_row{}
+.summary_render_sub{color:$primary; font-size:13px;font-weight:600;margin-bottom:8px;display:block;}
 .summary_title_row{
     display:flex; align-items: center; gap:10px;
     .summary_title{flex:1;min-width:0;}
@@ -1163,6 +1171,7 @@ input.comment_input{
 .fv_boxgroup_content{margin-top:12px;}
 .fv_boxgroup_content.type2{border:1px solid #dddddd;padding:15px;border-radius:6px;}
 .fv_boxgroup_content.type3{background:#f6f6f7;padding:15px;border-radius:6px;}
+.fv_boxgroup_content.type4{background:#f6f6f6;padding:15px;border-radius:6px;}
 .board_contents_wrap{}
 .board_contents_inner{}
 .upload_render_list_wrap{border:1px solid #dddddd;padding:15px;border-radius:6px;}
