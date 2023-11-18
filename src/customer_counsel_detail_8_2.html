@@ -56,6 +56,90 @@
                     </div>
                 </div>
             </section>
+            <!-- popup -->
+            <div class="popup_wrap" id="appPopup">
+                <div class="bg_dim"></div>
+                <div class="popup_modal_box_zone">
+                    <div class="popup_modal_box_wrap">
+                        <div class="popup_modal_box_inner">
+                            <div class="popup_modal_box">
+                                <div class="modal_contents_row">
+                                    <p class="modal_contents_title">문의하기</p>
+                                    <div class="modal_contents_form">
+                                        <div class="modal_contents_form_row">
+                                            <input type="text" class="form_input" placeholder="제목 작성란" />
+                                        </div>
+                                        <div class="modal_contents_form_row">
+                                            <div class="form_textarea_wrap htype3">
+                                                <textarea rows="10" cols="10" class="form_textarea type2"></textarea>
+                                            </div>
+                                            <p class="form_guide_message">관리자 답변 전에는 수정 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal_btn_row">
+                                    <a href="javascript:;" class="btn_modal_submit type2 close_trigger">취소</a>
+                                    <a href="javascript:;" class="btn_modal_submit close_trigger">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_wrap" id="appPopup2">
+                <div class="bg_dim"></div>
+                <div class="popup_modal_box_zone">
+                    <div class="popup_modal_box_wrap">
+                        <div class="popup_modal_box_inner">
+                            <div class="popup_modal_box">
+                                <div class="modal_contents_row">
+                                    <p class="modal_contents_title">문의하기</p>
+                                    <div class="modal_contents_form">
+                                        <div class="modal_contents_form_row">
+                                            <input type="text" class="form_input" placeholder="제목 작성란" value="입주 Call APP 사용방법" />
+                                        </div>
+                                        <div class="modal_contents_form_row">
+                                            <div class="form_textarea_wrap htype3">
+                                                <textarea rows="10" cols="10" class="form_textarea type2">
+사용방법을 모르겠습니다.
+어떻게 설치를 해야하나요?
+                                                </textarea>
+                                            </div>
+                                            <p class="form_guide_message">관리자 답변 전에는 수정 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal_btn_row">
+                                    <a href="javascript:;" class="btn_modal_submit type2 close_trigger">취소</a>
+                                    <a href="javascript:;" class="btn_modal_submit close_trigger">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // popup -->
+            <script>
+                // 퍼블확인용
+                let url = window.location.href.split('?')[1];
+                let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    var appPopup = new DesignPopup({
+                        selector: "#appPopup"
+                    });
+                    var appPopup2 = new DesignPopup({
+                        selector: "#appPopup2"
+                    });
+                    if(url_2 === "popup"){
+                        // 호출
+                        appPopup.popupShow();
+                    } else if(url_2 === "popup2"){
+                        // 호출
+                        appPopup2.popupShow();
+                    }
+                });
+            </script>
         </div>
     </form>
 </body>

@@ -1896,6 +1896,13 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   font-weight: 700;
 }
 
+.modal_contents_form_row {
+  margin-bottom: 12px;
+}
+.modal_contents_form_row:last-of-type {
+  margin-bottom: 8px;
+}
+
 .form_textarea {
   border: 0;
   background: #f4f4f4;
@@ -2707,8 +2714,19 @@ input.props_form:disabled {
   background: #fff;
   border: 1px solid #dddddd;
 }
+.form_textarea_wrap.htype3 .form_textarea {
+  height: 116px;
+}
 .form_textarea_wrap.htype2 .form_textarea {
   height: 166px;
+}
+
+.form_guide_message {
+  text-align: left;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #0054fc;
+  font-weight: 600;
 }
 
 .terms_contents_wrap {
@@ -3482,6 +3500,10 @@ select.combo_select {
   padding-left: 20px;
   padding-right: 20px;
 }
+.list_table tbody tr td.has_title2 {
+  text-align: left;
+  padding: 8px 0 8px 18px;
+}
 .list_table tbody tr td.nodata_td {
   padding: 100px 20px;
 }
@@ -3511,7 +3533,14 @@ select.combo_select {
 }
 .list_tdtext.ing_type2 {
   color: #0054ff;
-  font-weight: 500;
+  font-weight: 600;
+}
+.list_tdtext.current_01 {
+  color: #716f72;
+}
+.list_tdtext.current_02 {
+  color: #0256ff;
+  font-weight: 600;
 }
 
 .list_tdtitle {
@@ -3524,6 +3553,32 @@ select.combo_select {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+}
+
+.list_tdtitle_group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list_tdtitle_group .list_tdtitle {
+  flex: 1;
+}
+
+.list_tdtitle_else_group {
+  flex: 0;
+  white-space: nowrap;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.list_tdtitle_else {
+  font-size: 11px;
+  color: #b4b4b4;
+}
+.list_tdtitle_else.type2 {
+  color: #0855ff;
 }
 
 .nodata_para {
