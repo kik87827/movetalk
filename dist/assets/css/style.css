@@ -1149,6 +1149,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   transform: translateX(-50%);
   width: 720px;
   overflow-x: auto;
+  z-index: 20;
 }
 .bottom_layer_wrap.type2 {
   overflow: visible;
@@ -1567,11 +1568,15 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   padding: 20px;
 }
 
+.block_item_group .block_item {
+  margin-bottom: 20px;
+}
+
 .block_item {
   margin-bottom: 25px;
 }
 .block_item:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .block_group.type2 .block_item {
@@ -1901,6 +1906,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   border-radius: 6px;
   font-size: 14px;
   padding: 14px;
+  color: #232a35;
 }
 .form_textarea::-webkit-input-placeholder {
   text-align: center;
@@ -1910,6 +1916,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 }
 .form_textarea.htype2 {
   height: 123px;
+}
+.form_textarea.bgtype2 {
+  background-color: #edfbfb;
 }
 
 .modal_btn_row {
@@ -1930,6 +1939,46 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
+}
+
+.form_upload_render_img_wrap {
+  display: block;
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 5px;
+  background: #f1f1f1;
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+}
+.form_upload_render_img_wrap > img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.form_upload_render_img_wrap.noimg_wrap {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+}
+.form_upload_render_img_wrap.noimg_wrap:before {
+  display: block;
+  content: "";
+  width: 107px;
+  height: 73px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: url("../images/ico_full_noimage.png") no-repeat 50% 50%/100% auto;
+  transform: translate(-50%, -50%);
 }
 
 .btn_modal_submit {
@@ -2204,6 +2253,12 @@ input.form_input::input-placeholder {
 input.form_input.type2 {
   background: #f4f4f4;
 }
+input.form_input.type3 {
+  background: #edfbfb;
+}
+input.form_input.type4 {
+  background: #f1f1f1;
+}
 
 .field_else_item_wrap {
   margin-top: 18px;
@@ -2399,6 +2454,10 @@ input.props_form:disabled {
   border: 1px solid #00c6b1;
   background: #e5f9f7;
   box-sizing: border-box;
+  text-align: center;
+}
+.btn_inline_control.mintype2 {
+  min-width: 118px;
 }
 
 .btn_inline_control_text {
@@ -2839,6 +2898,36 @@ input.file_origin::-ms-browse {
   display: none;
 }
 
+.upload_file_item_list_wrap {
+  margin-top: 15px;
+}
+
+.upload_file_item_list > li {
+  margin-bottom: 15px;
+}
+.upload_file_item_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.upload_file_item {
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  padding: 13px 18px;
+}
+.upload_file_item .btn_data_delete {
+  flex: 0 0 18px;
+}
+
+.upload_file_value {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: #232a35;
+  font-weight: 600;
+}
+
 /* // form */
 /* banner */
 .single_banner_swiper_wrap {
@@ -2966,6 +3055,9 @@ input.file_origin::-ms-browse {
   text-align: center;
   box-sizing: border-box;
   min-height: 157px;
+}
+.detail_primary_box.type2 {
+  min-height: 0;
 }
 
 .detail_primary_title {
@@ -4810,5 +4902,39 @@ input.comment_input {
   text-align: right;
   margin-top: 30px;
   font-weight: 500;
+}
+
+.info_intro_box_list_wrap {
+  padding: 35px 20px;
+}
+
+.info_intro_box_list > li {
+  margin-bottom: 20px;
+}
+.info_intro_box_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.info_intro_box {
+  display: flex;
+  background: #f1f1f1;
+  border-radius: 7px;
+  padding: 20px 23px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info_intro_main {
+  color: #232a35;
+  font-weight: 600;
+  font-family: "SUITE", "Pretendard", Dotum;
+  font-size: 16px;
+}
+
+.info_intro_sub {
+  color: #b6b6b6;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

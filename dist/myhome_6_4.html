@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./assets/css/style.css" rel="stylesheet">
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/dynamicListener.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<form>
+		<div class="page_wrap">
+			<header class="header_wrap top_layer_wrap dtype2">
+				<hgroup class="hgroup_pixin top_layer_content">
+					<div class="header_left_layer"><a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a></div>
+					<h1 class="header_top_title">업체정보</h1>
+				</hgroup>
+			</header>
+			<section class="middle_wrap type3">
+				<div class="form_table_wrap">
+					<ul class="form_table_list">
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">업체명</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="CJ익스프레스">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">사업형태</p>
+							</div>
+							<div class="form_table_contents_row">
+								<div class="form_select_wrap">
+									<select class="form_select">
+										<option>개인</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">사업자 등록번호</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="123-456-7894">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">대표자명</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="홍길동">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">대표자 생년월일</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="1990-12-10">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">업체 연락처</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="02-1234-5678">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">업체 주소</p>
+							</div>
+							<div class="form_table_contents_row block_item_group">
+								<div class="block_item">
+									<div class="form_inline_group">
+										<input type="text" class="form_input" value="12345">
+										<a href="javascript:;" class="btn_inline_control mintype2"><span class="btn_inline_control_text">주소찾기</span></a>
+									</div>
+								</div>
+								<div class="block_item">
+									<input type="text" class="form_input" value="서울특별시 용산구 원효로53길 8">
+								</div>
+								<div class="block_item">
+									<input type="text" class="form_input" value="4층">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">카테고리</p>
+							</div>
+							<div class="form_table_contents_row">
+								<div class="form_select_wrap">
+									<select class="form_select ready">
+										<option value="0">선택</option>
+										<option value="1">옵션 1</option>
+										<option value="2">옵션 2</option>
+										<option value="3">옵션 3</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form_table_contents_row">
+								<div class="form_table_both">
+									<p class="form_table_label">사업자등록증</p>
+									<div class="form_table_both_content">
+										<div class="form_file_upload_item type2">
+											<span class="btn_file_text_box">
+												<span class="btn_file_text">파일 업로드</span>
+											</span>
+											<input type="file" class="file_origin">
+										</div>
+									</div>
+								</div>
+								<div class="upload_file_item_list_wrap">
+									<ul class="upload_file_item_list">
+										<li>
+											<div class="upload_file_item">
+												<div class="upload_file_value">사업자등록증.jpg</div>
+												<a href="javascript:;" class="btn_data_delete"><span class="hdtext">삭제</span></a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form_table_both">
+								<p class="form_table_label">대표이미지</p>
+								<div class="form_table_both_content">
+									<div class="form_file_upload_item type2">
+										<span class="btn_file_text_box">
+											<span class="btn_file_text">파일 업로드</span>
+										</span>
+										<input type="file" class="file_origin">
+									</div>
+								</div>
+							</div>
+							<div class="form_table_contents_row">
+								<div class="form_upload_render_img_wrap noimg_wrap">
+								</div>
+								<div class="upload_data_btn_row">
+									<a href="#" class="btn_data_delete"><span class="hdtext">삭제</span></a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form_table_both">
+								<p class="form_table_label">메뉴이미지</p>
+								<div class="form_table_both_content">
+									<div class="form_file_upload_item type2">
+										<span class="btn_file_text_box">
+											<span class="btn_file_text">파일 업로드</span>
+										</span>
+										<input type="file" class="file_origin">
+									</div>
+								</div>
+							</div>
+							<div class="form_table_contents_row">
+								<div class="form_upload_render_img_wrap noimg_wrap">
+								</div>
+								<div class="upload_data_btn_row">
+									<a href="#" class="btn_data_delete"><span class="hdtext">삭제</span></a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">업체소개</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="신한은행">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">은행명</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="신한은행">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">계좌번호</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="110-364-789-123">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">계좌주</p>
+							</div>
+							<div class="form_table_contents_row">
+								<input type="text" class="form_input" value="홍길동">
+							</div>
+						</li>
+						<li>
+							<div class="form_table_label_row">
+								<p class="form_table_label">기타요청</p>
+							</div>
+							<div class="form_table_contents_row">
+								<div class="form_textarea_wrap htype2">
+									<textarea rows="10" cols="10" placeholder="후기를 남겨주세요(30자 이내)" class="form_textarea type2">기타 요청 합니다.</textarea>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div class="bottom_layer_wrap">
+				<div class="bottom_layer_content btn_bottom_row">
+					<a href="#" class="btn_submit_box type2">
+						<span class="btn_submit_box_text">이전</span>
+					</a>
+					<a href="#" class="btn_submit_box">
+						<span class="btn_submit_box_text">완료</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

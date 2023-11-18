@@ -299,7 +299,7 @@ function detailTopSwiper() {
   const d_count_current = detail_header_wrap.querySelector(".d_count_current");
   const d_count_length = detail_header_wrap.querySelector(".d_count_length");
   const detail_photo_slide = !!detail_photo_swiper ? detail_photo_swiper.querySelectorAll(".swiper-slide") : null;
-  if (!!detail_photo_slide) {
+  if (detail_photo_slide>1) {
     if (detail_swiper_obj !== null) {
       detail_swiper_obj.update();
     } else {
@@ -316,6 +316,8 @@ function detailTopSwiper() {
         d_count_current.textContent = detail_swiper_obj.realIndex+1;
       });
     }
+  }else{
+    detail_header_wrap.querySelector(".detail_current_count_row").style.opacity = "0"
   }
 }
 

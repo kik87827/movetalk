@@ -82,7 +82,7 @@ html:not(.touchmode){
     }
 }
 .bottom_layer_wrap{
-    position:fixed;bottom:0;left:50%; transform: translateX(-50%);width:720px;  overflow-x:auto;
+    position:fixed;bottom:0;left:50%; transform: translateX(-50%);width:720px;  overflow-x:auto; z-index:20;
     &.type2{overflow:visible;}
     &::-webkit-scrollbar {width:0;}
 }

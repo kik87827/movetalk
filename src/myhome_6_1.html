@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/_head.html')
+<body class="front_body">
+    <form>
+        <div class="page_wrap">
+            <div class="detail_header_wrap top_layer_wrap">
+                <div class="top_layer_content type2">
+                    <div class="swiper-container detail_photo_container" id="detail_photo_container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="detail_photo_img"><img src="./assets/images/temp_1080x700.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_both_layer_group">
+                        <div class="header_left_layer"><a href="javascript:;" class="btn_history_back type2"><span class="hdtext">뒤로가기</span></a></div>
+                        <div class="header_right_layer"><a href="javascript:;" class="btn_header_like"><span class="hdtext">좋아요</span></a></div>
+                    </div>
+                    <div class="detail_header_content_wrap">
+                        <div class="detail_current_count_row">
+                            <div class="detail_current_count"><span class="d_count_current">1</span> / <span class="d_count_length"></span></div>
+                        </div>
+                        <div class="detail_primary_box type2">
+                            <h1 class="detail_primary_title">CJ익스프레스</h1>
+                            <p class="detail_primay_sub_copy">안녕하세요, 서울의 전지역 이사를 책임지고 있는 CJ익스프레스 용산점입니다.</p>
+                            <ul class="detail_data_count_list">
+                                <li>
+                                    <div class="detail_data_count_item">
+                                        <i class="detail_data_ico ico_star"></i>
+                                        <div class="data_summary_text_g">
+                                            <span class="data_summary_count">4.6</span>
+                                            <span class="data_summary_unit">(545)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="detail_data_count_item">
+                                        <i class="detail_data_ico ico_heart"></i>
+                                        <div class="data_summary_text_g">
+                                            <span class="data_summary_count">135</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="middle_wrap type2">
+               <div class="info_intro_box_list_wrap">
+                    <ul class="info_intro_box_list">
+                        <li>
+                            <a href="#" class="info_intro_box">
+                                <span class="info_intro_main">기본정보</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="info_intro_box">
+                                <span class="info_intro_main">업체정보</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="info_intro_box">
+                                <span class="info_intro_main">업체정보 수정요청 중</span>
+                                <span class="info_intro_sub">2021.10.30</span>
+                            </a>
+                        </li>
+                    </ul>
+               </div>
+            </section>
+            <div class="bottom_layer_wrap">
+                <div class="bottom_layer_content bottom_menu_list_wrap">
+                    <ul class="bottom_menu_list">
+                        <li>
+                            <a href="#" class="bottom_menu ico_estimate">
+                                <i class="bottom_menu_ico"></i>
+                                <span class="bottom_menu_text">견적관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bottom_menu ico_review">
+                                <i class="bottom_menu_ico"></i>
+                                <span class="bottom_menu_text">리뷰보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bottom_menu ico_myhome active">
+                                <i class="bottom_menu_ico"></i>
+                                <span class="bottom_menu_text">마이홈</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bottom_menu ico_help">
+                                <i class="bottom_menu_ico"></i>
+                                <span class="bottom_menu_text">도와줘요</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bottom_menu ico_customer">
+                                <i class="bottom_menu_ico"></i>
+                                <span class="bottom_menu_text">고객센터</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            detailTopSwiper();
+            activeToggle([".btn_header_like"]);
+        </script>
+    </form>
+</body>
+</html>
