@@ -1122,6 +1122,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   border-bottom-color: #fff;
   box-shadow: none;
 }
+.top_layer_wrap.layer_type2 {
+  position: absolute;
+}
 .top_layer_wrap.type2 {
   height: auto;
   min-height: 0;
@@ -1290,10 +1293,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .btn_bottom_row {
   display: flex;
-  padding: 0 20px 20px;
+  padding: 20px;
   gap: 11px;
   background: #fff;
-  margin-top: 20px;
 }
 
 .btn_submit_box {
@@ -1862,6 +1864,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .popup_modal_box {
   max-width: 280px;
+  width: 100%;
   margin: 0 auto;
   border-radius: 15px;
   background: #fff;
@@ -1936,6 +1939,11 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   padding: 0 13px 13px;
   display: flex;
   gap: 11px;
+}
+.modal_btn_row .btn_modal_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal_inner_title_row {
@@ -2205,6 +2213,11 @@ input.fp_input::input-placeholder {
   }
   .popup_item {
     margin: 0 1.25rem;
+  }
+}
+@media (max-width: 374px) {
+  .popup_modal_box_inner {
+    padding: 30px;
   }
 }
 /* // 공통 popup */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/_head.html')
+<body class="front_body">
+	<div class="page_wrap">
+        <!-- popup -->
+		<div class="popup_wrap" id="samplePopup">
+			<div class="bg_dim"></div>
+			<div class="popup_modal_box_zone">
+				<div class="popup_modal_box_wrap">
+					<div class="popup_modal_box_inner">
+						<div class="popup_modal_box">
+							<div class="modal_contents_row">
+								<p class="modal_main_message">고객님의 주소 설정은 서울 특별시 송파구 마천로59길 7(마천동, 트라움바우)로 되었습니다. 견적문의 주소가 맞습니까?
+</p>
+							</div>
+							<div class="modal_btn_row">
+								<a href="javascript:;" class="btn_modal_submit type2 close_trigger">확인</a>
+								<a href="javascript:;" class="btn_modal_submit close_trigger">주소변경하기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var designPopup = new DesignPopup({
+					selector: "#samplePopup"
+				});
+
+                designPopup.popupShow();
+			});
+		</script>
+	</div>
+</body>
+</html>
